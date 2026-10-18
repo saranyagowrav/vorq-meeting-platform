@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Theme tokens. Dark is the original VORQ palette (preserved exactly).
+  Light is a clean premium theme using the requested color values.
+  Values are space-separated RGB channels for Tailwind <alpha-value>.
+*/
+
+:root,
+.dark {
+  --mid-900: 11 16 32;       /* #0B1020 */
+  --mid-800: 17 24 43;       /* #11182B */
+  --mid-700: 20 27 51;       /* #141B33 */
+  --mid-600: 27 36 64;       /* #1B2440 */
+
+  --vio-electric: 139 123 255;  /* #8B7BFF */
+  --vio-soft: 169 155 255;      /* #A99BFF */
+  --vio-deep: 107 90 230;       /* #6B5AE6 */
+
+  --lav-100: 233 230 255;  /* original #E9E6FF-ish, preserved */
+  --lav-200: 212 204 255;  /* #D4CCFF */
+  --lav-300: 191 181 255;  /* #BFB5FF */
+
+  --grid-line: rgba(130, 112, 255, 0.05);
+  --radial-violet: rgba(130, 112, 255, 0.18);
+
+  --bg-body: #0B1020;
+  --text-body: #FFFFFF;
+  --ink: 255 255 255;
+
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-strong-border: rgba(255, 255, 255, 0.15);
+  --glass-strong-bg: rgba(255, 255, 255, 0.07);
+
+  --hairline-border: rgba(255, 255, 255, 0.1);
+
+  --glow-ring: rgba(130, 112, 255, 0.15);
+  --glow-shadow: rgba(130, 112, 255, 0.5);
+
+  --logo-vor: #FFFFFF;
+  --logo-q: #8B7BFF;
+  --logo-symbol-bg: #0B1020;
+}
+
+.light {
+  --mid-900: 247 248 252;   /* #F7F8FC main bg */
+  --mid-800: 255 255 255;   /* #FFFFFF cards */
+  --mid-700: 255 255 255;   /* #FFFFFF elevated */
+  --mid-600: 240 242 248;   /* subtle surface */
+
+  --vio-electric: 117 99 217;  /* #7563D9 */
+  --vio-soft: 134 117 221;     /* lighter violet for light mode */
+  --vio-deep: 99 82 196;       /* deeper violet */
+
+  --lav-100: 98 105 129;       /* #626981 secondary text */
+  --lav-200: 99 82 196;        /* violet for accents/eyebrow */
+  --lav-300: 117 99 217;       /* #7563D9 */
+
+  --grid-line: rgba(117, 99, 217, 0.06);
+  --radial-violet: rgba(117, 99, 217, 0.1);
+
+  --bg-body: #F7F8FC;
+  --text-body: #11152B;
+  --ink: 17 21 43;
+
+  --glass-border: #E4E7F0;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-strong-border: #E4E7F0;
+  --glass-strong-bg: rgba(255, 255, 255, 0.85);
+
+  --hairline-border: #E4E7F0;
+
+  --glow-ring: rgba(117, 99, 217, 0.2);
+  --glow-shadow: rgba(117, 99, 217, 0.25);
+
+  --logo-vor: #11152B;
+  --logo-q: #7563D9;
+  --logo-symbol-bg: #11152B;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--bg-body);
+    color: var(--text-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  ::selection {
+    background-color: rgba(139, 123, 255, 0.4);
+    color: #ffffff;
+  }
+  .light ::selection {
+    background-color: rgba(117, 99, 217, 0.25);
+    color: #11152B;
+  }
+}
+
+@layer utilities {
+  .text-gradient-violet {
+    background-image: linear-gradient(
+      to right,
+      rgb(var(--vio-electric)),
+      rgb(var(--vio-soft)),
+      rgb(var(--lav-200))
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .glass {
+    border: 1px solid var(--glass-border);
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .glass-strong {
+    border: 1px solid var(--glass-strong-border);
+    background-color: var(--glass-strong-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+  .hairline {
+    border: 1px solid var(--hairline-border);
+  }
+  .glow-violet {
+    box-shadow: 0 0 0 1px var(--glow-ring), 0 12px 40px -12px var(--glow-shadow);
+  }
+  .animate-fade-up {
+    opacity: 0;
+  }
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-500 { animation-delay: 0.5s; }
+
+  /* Smooth theme transition for themed surfaces */
+  .theme-transition,
+  .theme-transition * {
+    transition-property: background-color, border-color, color, box-shadow, fill;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-float,
+  .animate-float-slow {
+    animation: none !important;
+  }
+}
