@@ -12,7 +12,7 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
 
   if (loading) {
     return (
-      <div className="theme-transition flex min-h-screen items-center justify-center bg-midnight-900">
+      <div className="theme-transition flex min-h-screen items-center justify-center bg-transparent">
         <div className="flex flex-col items-center gap-3">
           <div className="h-8 w-8 animate-spin rounded-full border-2 border-violet-electric/30 border-t-violet-electric" />
           <p className="text-sm text-lavender-100/60">Loading your workspace…</p>

@@ -33,6 +33,7 @@
   --radial-violet: rgba(101, 21, 47, 0.35);
 
   --bg-body: #160F14;
+  --bg-gradient: linear-gradient(160deg, #350D1C 0%, #252126 100%);
   --text-body: #F7F5F6;
   --ink: 229 229 232;
 
@@ -48,8 +49,8 @@
 
   --logo-vor: #F7F5F6;
   --logo-q: #BFC1C5;
-  --logo-symbol-bg: #350D1C;
-  --logo-front: #F7F5F6;
+  --logo-symbol-bg: #252126;
+  --logo-accent: #65152F;
 }
 
 .light {
@@ -76,6 +77,7 @@
   --radial-violet: rgba(101, 21, 47, 0.08);
 
   --bg-body: #F7F5F6;
+  --bg-gradient: linear-gradient(160deg, #F7F5F6 0%, #E5E5E8 100%);
   --text-body: #252126;
   --ink: 37 33 38;
 
@@ -91,8 +93,8 @@
 
   --logo-vor: #252126;
   --logo-q: #65152F;
-  --logo-symbol-bg: #65152F;
-  --logo-front: #F7F5F6;
+  --logo-symbol-bg: #252126;
+  --logo-accent: #65152F;
 }
 
 @layer base {
@@ -101,6 +103,9 @@
   }
   body {
     background-color: var(--bg-body);
+    background-image: var(--bg-gradient);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: var(--text-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -1,5 +1,12 @@
 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="48" height="48" rx="11" fill="#65152F" />
-  <path d="M17 16 L26 16 L35.5 38 L31 38 Z" fill="#BFC1C5" />
-  <path d="M13 12 L22 12 L31.5 34 L27 34 Z" fill="#F7F5F6" />
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E5E5E8"/>
+      <stop offset="0.55" stop-color="#BFC1C5"/>
+      <stop offset="1" stop-color="#8F9298"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="11" fill="#252126"/>
+  <path d="M17 16 L26 16 L35.5 38 L31 38 Z" fill="#65152F"/>
+  <path d="M13 12 L22 12 L31.5 34 L27 34 Z" fill="url(#metal)"/>
 </svg>

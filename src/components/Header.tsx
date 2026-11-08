@@ -49,7 +49,7 @@ export default function Header() {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className="rounded-lg px-4 py-2 text-sm font-medium text-lavender-100/80 transition-colors hover:bg-lavender-100/[0.05] hover:text-ink"
+                  className="rounded-lg px-4 py-2 text-sm font-medium text-lavender-100/80 transition-all duration-300 hover:-translate-y-0.5 hover:bg-lavender-100/[0.06] hover:text-ink"
                 >
                   {link.label}
                 </a>
@@ -101,7 +101,7 @@ export default function Header() {
                   <a
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="block rounded-lg px-4 py-3 text-sm font-medium text-lavender-100/90 transition-colors hover:bg-lavender-100/[0.05] hover:text-ink"
+                    className="block rounded-lg px-4 py-3 text-sm font-medium text-lavender-100/90 transition-all duration-300 hover:-translate-y-0.5 hover:bg-lavender-100/[0.06] hover:text-ink"
                   >
                     {link.label}
                   </a>

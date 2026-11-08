@@ -38,7 +38,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="theme-transition relative min-h-screen bg-midnight-900">
+    <div className="theme-transition relative min-h-screen bg-transparent">
       <div className="absolute inset-0 bg-radial-violet" aria-hidden />
       <div
         className="absolute inset-0 bg-grid-faint bg-grid opacity-30 [mask-image:radial-gradient(ellipse_at_top,black,transparent_60%)]"

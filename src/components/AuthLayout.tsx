@@ -10,7 +10,7 @@ interface AuthLayoutProps {
 
 export default function AuthLayout({ children }: AuthLayoutProps) {
   return (
-    <div className="theme-transition relative flex min-h-screen flex-col bg-midnight-900">
+    <div className="theme-transition relative flex min-h-screen flex-col bg-transparent">
       {/* Background layers */}
       <div className="absolute inset-0 bg-radial-violet" aria-hidden />
       <div

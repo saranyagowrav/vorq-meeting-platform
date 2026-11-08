@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 
 export default function LandingPage() {
   return (
-    <div className="theme-transition relative min-h-screen bg-midnight-900">
+    <div className="theme-transition relative min-h-screen bg-transparent">
       <Header />
       <main>
         <Hero />
