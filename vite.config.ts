@@ -13,5 +13,4 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  envPrefix: ['SUPABASE_URL', 'SUPABASE_ANON_KEY'],
 });
