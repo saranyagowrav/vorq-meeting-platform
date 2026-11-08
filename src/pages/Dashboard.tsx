@@ -92,7 +92,7 @@ export default function Dashboard() {
                       </button>
                       <button
                         onClick={handleSignOut}
-                        className="flex w-full items-center gap-2.5 px-4 py-2.5 text-sm text-rose-300 transition-colors hover:bg-rose-500/10"
+                        className="flex w-full items-center gap-2.5 px-4 py-2.5 text-sm text-[rgb(var(--state-error))] transition-colors hover:bg-burgundy/10"
                       >
                         <LogOut className="h-4 w-4" />
                         Sign out
@@ -139,8 +139,8 @@ export default function Dashboard() {
             </div>
 
             <div className="glass group relative overflow-hidden rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-lavender-100/30">
-              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-emerald-500/0 blur-3xl transition-all duration-500 group-hover:bg-emerald-500/20" aria-hidden />
-              <div className="relative mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-600/10 text-emerald-300">
+              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-silver/0 blur-3xl transition-all duration-500 group-hover:bg-silver/20" aria-hidden />
+              <div className="relative mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-silver/25 to-platinum/10 text-violet-soft">
                 <LogIn className="h-6 w-6" strokeWidth={2} />
               </div>
               <h2 className="relative mb-1 font-display text-lg font-semibold text-ink">
@@ -158,7 +158,7 @@ export default function Dashboard() {
 
           {/* Info toast */}
           {actionInfo && (
-            <div className="mt-5 flex items-center gap-2 rounded-xl border border-sky-500/30 bg-sky-500/10 px-4 py-3 text-sm text-sky-300">
+            <div className="mt-5 flex items-center gap-2 rounded-xl border border-silver/30 bg-silver/10 px-4 py-3 text-sm text-lavender-100">
               <Info className="h-4 w-4 shrink-0" />
               <span>{actionInfo}</span>
             </div>

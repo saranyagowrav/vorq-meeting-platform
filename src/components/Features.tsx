@@ -28,21 +28,21 @@ const FEATURES: Feature[] = [
     title: 'Noise Intelligence',
     description:
       'Adaptive background suppression and ambient sound detection keep every voice crisp and distraction-free.',
-    accent: 'from-emerald-500/20 to-teal-600/10 text-emerald-300',
+    accent: 'from-silver/25 to-platinum/10 text-violet-soft',
   },
   {
     icon: ShieldCheck,
     title: 'Smart Moderation',
     description:
       'Balanced speaking time tracking and gentle nudges help every voice be heard — without anyone feeling policed.',
-    accent: 'from-sky-500/20 to-indigo-600/10 text-sky-300',
+    accent: 'from-violet-deep/30 to-silver/10 text-violet-soft',
   },
   {
     icon: Lock,
     title: 'Secure Meetings',
     description:
       'End-to-end encryption, per-meeting access controls, and zero retention of private conversations by default.',
-    accent: 'from-rose-500/20 to-violet-deep/10 text-rose-300',
+    accent: 'from-burgundy/25 to-violet-deep/10 text-violet-soft',
   },
 ];
 

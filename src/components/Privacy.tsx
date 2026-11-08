@@ -66,7 +66,7 @@ export default function Privacy() {
         {/* Visual: privacy shield card */}
         <div className="relative hidden justify-center lg:flex">
           <div className="glass-strong relative w-full max-w-sm rounded-3xl p-8 text-center glow-violet">
-            <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-electric to-violet-deep shadow-[0_10px_40px_-8px_rgba(130,112,255,0.6)]">
+            <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-electric to-violet-deep shadow-[0_10px_40px_-8px_rgba(101,21,47,0.6)]">
               <Lock className="h-9 w-9 text-white" strokeWidth={2} />
             </div>
             <h3 className="font-display text-xl font-semibold text-ink">
@@ -77,7 +77,7 @@ export default function Privacy() {
               on demand — always.
             </p>
             <div className="mt-6 flex items-center justify-center gap-2 rounded-xl border border-lavender-100/15 bg-midnight-900/40 py-2.5">
-              <span className="h-2 w-2 rounded-full bg-emerald-400" />
+              <span className="h-2 w-2 rounded-full bg-silver" />
               <span className="text-xs font-medium text-lavender-100/80">
                 Privacy commitments in active development
               </span>

@@ -89,19 +89,19 @@ export default function SignIn() {
           </div>
 
           {rememberError && (
-            <div className="mb-4 flex items-start gap-2 rounded-xl border border-rose-500/30 bg-rose-500/10 px-4 py-3 text-sm text-rose-300">
+            <div className="mb-4 flex items-start gap-2 rounded-xl border border-burgundy/40 bg-burgundy/15 px-4 py-3 text-sm text-[rgb(var(--state-error))]">
               <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
               <span>{rememberError}</span>
             </div>
           )}
           {success && (
-            <div className="mb-4 flex items-start gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-300">
+            <div className="mb-4 flex items-start gap-2 rounded-xl border border-silver/40 bg-silver/10 px-4 py-3 text-sm text-[rgb(var(--state-success))]">
               <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" />
               <span>{success}</span>
             </div>
           )}
           {forgotSuccess && (
-            <div className="mb-4 flex items-start gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-300">
+            <div className="mb-4 flex items-start gap-2 rounded-xl border border-silver/40 bg-silver/10 px-4 py-3 text-sm text-[rgb(var(--state-success))]">
               <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" />
               <span>{forgotSuccess}</span>
             </div>

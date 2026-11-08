@@ -22,6 +22,12 @@ export default {
           200: 'rgb(var(--lav-200) / <alpha-value>)',
           300: 'rgb(var(--lav-300) / <alpha-value>)',
         },
+        burgundy: '#65152F',
+        wine: '#350D1C',
+        silver: '#BFC1C5',
+        platinum: '#E5E5E8',
+        charcoal: '#252126',
+        pearl: '#F7F5F6',
       },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
